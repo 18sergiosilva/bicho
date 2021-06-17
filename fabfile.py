@@ -4,7 +4,7 @@ CONNECTION_PROPERTIES = {
     "host": "18.118.255.26",
     "user": "ubuntu",
     "connect_kwargs": {
-        "key_filename": "/home/ubuntu/bicho/llaveSA.pem"
+        "key_filename": "/home/g1803sergiosilva/bicho/llaveSA.pem"
     },
 }
 
