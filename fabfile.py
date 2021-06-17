@@ -35,6 +35,3 @@ def installback(ctx):
 def deploy(ctx):
     with Connection(**CONNECTION_PROPERTIES) as c:
         installback(c)
-        
-        
-deploy(ctx)
