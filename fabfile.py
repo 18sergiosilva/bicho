@@ -11,23 +11,25 @@ CONNECTION_PROPERTIES = {
 
 @task
 def installback(ctx):
-    ctx.run("sudo docker pull 1803sergiosilva/backendactualizarproducto:latest")
-    ctx.run("sudo docker run -d -p 3003:3003 1803sergiosilva/backendactualizarproducto:latest")
+    ctx.run("sudo docker-compose down --rmi=all")
+    ctx.run("sudo docker-compose up --build -d")
+    #ctx.run("sudo docker pull 1803sergiosilva/backendactualizarproducto:latest")
+    #ctx.run("sudo docker run -d -p 3003:3003 1803sergiosilva/backendactualizarproducto:latest")
 
-    ctx.run("sudo docker pull 1803sergiosilva/backendcrearproducto:latest")
-    ctx.run("sudo docker run -d -p 3000:3000 1803sergiosilva/backendcrearproducto:latest")
+    #ctx.run("sudo docker pull 1803sergiosilva/backendcrearproducto:latest")
+    #ctx.run("sudo docker run -d -p 3000:3000 1803sergiosilva/backendcrearproducto:latest")
 
-    ctx.run("sudo docker pull 1803sergiosilva/backendeliminarproducto:latest")
-    ctx.run("sudo docker run -d -p 3001:3001 1803sergiosilva/backendeliminarproducto:latest")
+    #ctx.run("sudo docker pull 1803sergiosilva/backendeliminarproducto:latest")
+    #ctx.run("sudo docker run -d -p 3001:3001 1803sergiosilva/backendeliminarproducto:latest")
 
-    ctx.run("sudo docker pull 1803sergiosilva/backendordenes:latest")
-    ctx.run("sudo docker run -d -p 3004:3000 1803sergiosilva/backendordenes:latest")
+    #ctx.run("sudo docker pull 1803sergiosilva/backendordenes:latest")
+    #ctx.run("sudo docker run -d -p 3004:3000 1803sergiosilva/backendordenes:latest")
 
-    ctx.run("sudo docker pull 1803sergiosilva/backendusuarios:latest")
-    ctx.run("sudo docker run -d -p 3005:3000 1803sergiosilva/backendusuarios:latest")
+    #ctx.run("sudo docker pull 1803sergiosilva/backendusuarios:latest")
+    #ctx.run("sudo docker run -d -p 3005:3000 1803sergiosilva/backendusuarios:latest")
 
-    ctx.run("sudo docker pull 1803sergiosilva/backendverproducto:latest")
-    ctx.run("sudo docker run -d -p 3002:3002 1803sergiosilva/backendverproducto:latest")
+    #ctx.run("sudo docker pull 1803sergiosilva/backendverproducto:latest")
+    #ctx.run("sudo docker run -d -p 3002:3002 1803sergiosilva/backendverproducto:latest")
 
     print("Lanzamiento de instancias terminado")
 
